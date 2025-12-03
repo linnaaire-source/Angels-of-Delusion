@@ -39,4 +39,11 @@ This page is exclusively about music, where people can find new songs or even ne
 <!-- Interface! -->
 
 # Interface
-The interface is where people can add music to. It has three boxes the user has to fill
+The interface is where people can add music to. It has four boxes that the user has to fill.
+
+# Gallery
+Here, the user can see and discover the numerous albums we have displayed for their enjoyment.
+
+# Genres
+
+Here we displayed a couple of music genres just for the sake of information and culture.
