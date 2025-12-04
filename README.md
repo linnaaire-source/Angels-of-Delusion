@@ -20,17 +20,17 @@ This page is exclusively about music, where people can find new songs or even ne
   <ol>
     <li>
       <ul>
-        First, we have an interface where people can add songs/albums. The user has to provide an url of the image and direct link of the album, and the name of such album.
+        Interface!
       </ul>
     </li>
     <li>
       <ul>
-        Then, we have a gallery, where people can see the music we post. Such as songs or albums!
+        Gal-lery!
       </ul>
     </li>
     <li>
       <ul>
-        And finally, we have a table of music genres, so people can discover what they are and what each genre represents.
+        Music Genres!
       </ul>
     </li>
   </ol>
