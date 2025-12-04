@@ -20,9 +20,35 @@
     <section id="formulario-producto">
       <h2>Añadir nuevo producto</h2>
       <form id="productoForm">
-        <input type="text" id="nombre" placeholder="Nombre del artista/álbum" required>
-        <input type="text" id="imagen" placeholder="URL de la imagen" required>
-        <input type="text" id="enlace" placeholder="URL de Spotify" required>
+        <div class="form-group">
+          <input type="text" id="nombre" placeholder="Nombre del artista/álbum">
+          <span class="error-message" id="error-nombre"></span>
+        </div>
+        
+        <div class="form-group">
+          <input type="text" id="imagen" placeholder="URL de la imagen">
+          <span class="error-message" id="error-imagen"></span>
+        </div>
+        
+        <div class="form-group">
+          <input type="text" id="enlace" placeholder="URL de Spotify">
+          <span class="error-message" id="error-enlace"></span>
+        </div>
+        
+        <div class="form-group">
+          <select id="genero">
+            <option value="">Selecciona un género</option>
+            <option value="K-POP">K-POP</option>
+            <option value="POP">POP</option>
+            <option value="RAP/HIP-HOP">RAP/HIP-HOP</option>
+            <option value="INDIE">INDIE</option>
+            <option value="ELECTRONIC">ELECTRONIC</option>
+            <option value="R&B">R&B</option>
+            <option value="J-POP">J-POP</option>
+          </select>
+          <span class="error-message" id="error-genero"></span>
+        </div>
+        
         <button type="submit">Añadir</button>
       </form>
     </section>
@@ -39,6 +65,7 @@
         <img src="https://i.scdn.co/image/ab67616d0000b2737f5ac389dbcaf7a8c17371e3" alt="Twice - Ready to Be">
       </a>
       <h3>Twice</h3>
+      <span class="genero-badge">K-POP</span>
     </div>
 
     <div class="grupo">
@@ -48,6 +75,7 @@
           alt="xtraordinary girls (XG)">
       </a>
       <h3>xtraordinary girls (XG)</h3>
+      <span class="genero-badge">K-POP</span>
     </div>
 
     <div class="grupo">
@@ -56,6 +84,7 @@
         <img src="https://i.scdn.co/image/ab67616d0000b273aed0f31dcd91c3c0a4a6ca73" alt="BIBI - EVE: ROMANCE">
       </a>
       <h3>BIBI</h3>
+      <span class="genero-badge">R&B</span>
     </div>
 
     <div class="grupo">
@@ -65,6 +94,7 @@
           alt="WOS">
       </a>
       <h3>WOS</h3>
+      <span class="genero-badge">RAP/HIP-HOP</span>
     </div>
 
     <div class="grupo">
@@ -73,6 +103,7 @@
         <img src="https://m.media-amazon.com/images/I/81YIufY4j6L._UF894,1000_QL80_.jpg" alt="Man's Best Friend">
       </a>
       <h3>Sabrina Carpenter</h3>
+      <span class="genero-badge">POP</span>
     </div>
 
     <div class="grupo">
@@ -81,6 +112,7 @@
         <img src="https://i1.sndcdn.com/artworks-3V9MmaZQMIsTE4Hl-g7HKRQ-t500x500.jpg" alt="Monitoring">
       </a>
       <h3>Hatsune Miku</h3>
+      <span class="genero-badge">J-POP</span>
     </div>
 
     <div class="grupo">
@@ -88,6 +120,7 @@
         <img src="https://i.scdn.co/image/ab67616d00001e025ab3c842fde848df7a4ee6d9" alt="Eternal Sunshine">
       </a>
       <h3>Ariana Grande</h3>
+      <span class="genero-badge">POP</span>
     </div>
 
     <div class="grupo">
@@ -97,6 +130,7 @@
           alt="Katseye">
       </a>
       <h3>Katseye</h3>
+      <span class="genero-badge">K-POP</span>
     </div>
 
     <div class="grupo">
@@ -105,6 +139,7 @@
         <img src="https://cdn-images.dzcdn.net/images/cover/736550d15970021056e5e918e4c7d0c6/1900x1900-000000-80-0-0.jpg" alt="Softboiledegg">
       </a>
       <h3>Softboiledegg</h3>
+      <span class="genero-badge">J-POP</span>
     </div>
 
     <div class="grupo">
@@ -113,6 +148,7 @@
         <img src="https://i.discogs.com/Ti88zJuVqM1rmBBYK7uLZ9D73A3ma8kiZumVyfiGv5c/rs:fit/g:sm/q:90/h:600/w:599/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMzOTM2/NjA5LTE3NDY4NjQ1/MTUtNjM1MC5qcGVn.jpeg" alt="Pink Pantheress">
       </a>
       <h3>Pink Pantheress</h3>
+      <span class="genero-badge">ELECTRONIC</span>
     </div>
 
     <div class="grupo">
@@ -121,6 +157,7 @@
         <img src="https://i.scdn.co/image/ab67616d00001e0208256748d3e6c3ed016cab16" alt="Rosalia">
       </a>
       <h3>Rosalia</h3>
+      <span class="genero-badge">POP</span>
     </div>
 
     <div class="grupo">
@@ -129,6 +166,7 @@
         <img src="https://i.scdn.co/image/ab6761610000e5ebb280339eb4564694ce69778a" alt="F5ve">
       </a>
       <h3>F5ve</h3>
+      <span class="genero-badge">J-POP</span>
     </div>
 
   </main>
@@ -141,7 +179,7 @@
     <div class="generos-grid">
       <div class="genero-item">
         <h3>K-POP</h3>
-        <p> Música pop coreana caracterizada por coreografías sincronizadas, producciones visuales impactantes y grupos con miembros bien definidos.</p>
+        <p>Música pop coreana caracterizada por coreografías sincronizadas, producciones visuales impactantes y grupos con miembros bien definidos.</p>
       </div>
       <div class="genero-item">
         <h3>POP</h3>
@@ -180,53 +218,422 @@
   </footer>
 
   <script>
-    // Variables para almacenar productos en memoria (sin localStorage)
+
+    // ============================================
+    // FUNCIONES DE VALIDACIÓN CON JAVASCRIPT
+    // ============================================
+
+    // Array para almacenar productos dinámicos
     let productos = [];
 
-    // Mostrar productos
+    // Limpiar todos los mensajes de error
+    function limpiarErrores() {
+      const errores = document.querySelectorAll('.error-message');
+      errores.forEach(error => {
+        error.textContent = '';
+        error.style.display = 'none';
+      });
+      
+      // Quitar bordes rojos de los inputs
+      const inputs = document.querySelectorAll('#productoForm input, #productoForm select');
+      inputs.forEach(input => {
+        input.style.borderColor = '#444';
+      });
+    }
+
+    // Mostrar mensaje de error
+    function mostrarError(idInput, mensaje) {
+      const inputElement = document.getElementById(idInput);
+      const errorElement = document.getElementById('error-' + idInput);
+      
+      inputElement.style.borderColor = '#ff4444';
+      errorElement.textContent = mensaje;
+      errorElement.style.display = 'block';
+    }
+
+    // Validar que el campo no esté vacío
+    function validarCampoVacio(valor, nombreCampo) {
+      if (!valor || valor.trim() === '') {
+        return `El campo ${nombreCampo} es obligatorio`;
+      }
+      return null;
+    }
+
+    // Validar longitud mínima y máxima
+    function validarLongitud(valor, min, max, nombreCampo) {
+      const longitud = valor.trim().length;
+      if (longitud < min) {
+        return `${nombreCampo} debe tener al menos ${min} caracteres`;
+      }
+      if (longitud > max) {
+        return `${nombreCampo} no puede tener más de ${max} caracteres`;
+      }
+      return null;
+    }
+
+    // Validar que sea una URL válida
+    function validarURL(url, nombreCampo) {
+      try {
+        const testUrl = url.startsWith('http') ? url : 'https://' + url;
+        new URL(testUrl);
+        return null;
+      } catch (e) {
+        return `${nombreCampo} debe ser una URL válida`;
+      }
+    }
+
+    // Validar que la URL sea de una imagen
+    function validarURLImagen(url) {
+      const extensionesValidas = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg'];
+      const urlLowerCase = url.toLowerCase();
+      
+      const esImagen = extensionesValidas.some(ext => urlLowerCase.includes(ext));
+      
+      if (!esImagen && !urlLowerCase.includes('scdn.co') && !urlLowerCase.includes('cdn')) {
+        return 'La URL debe ser de una imagen válida (jpg, png, gif, webp, svg)';
+      }
+      
+      return null;
+    }
+
+    // Validar que la URL sea de Spotify
+    function validarURLSpotify(url) {
+      if (!url.includes('spotify.com')) {
+        return 'La URL debe ser de Spotify (open.spotify.com)';
+      }
+      return null;
+    }
+
+    // Validar que se haya seleccionado un género
+    function validarGenero(genero) {
+      if (!genero || genero === '') {
+        return 'Debes seleccionar un género musical';
+      }
+      return null;
+    }
+
+    // ============================================
+    // CRUD - READ: Mostrar productos
+    // ============================================
+
     function mostrarProductos() {
       const galeria = document.getElementById("galeria");
       
+      const productosDinamicos = galeria.querySelectorAll('.grupo-dinamico');
+      productosDinamicos.forEach(p => p.remove());
       
-      const elementosOriginales = Array.from(galeria.children);
-      
-      
-      productos.forEach(p => {
+      productos.forEach((p, index) => {
         const div = document.createElement("div");
-        div.classList.add("grupo");
+        div.classList.add("grupo", "grupo-dinamico");
 
         div.innerHTML = `
-        <a href="${p.enlace}" target="_blank">
-          <img src="${p.imagen}" alt="${p.nombre}">
-        </a>
-        <h3>${p.nombre}</h3>
-      `;
+          <a href="${p.enlace}" target="_blank">
+            <img src="${p.imagen}" alt="${p.nombre}">
+          </a>
+          <h3>${p.nombre}</h3>
+          <span class="genero-badge">${p.genero}</span>
+          <div class="acciones-producto">
+            <button class="btn-editar" onclick="editarProducto(${index})">✏️ Editar</button>
+            <button class="btn-eliminar" onclick="eliminarProducto(${index})">🗑️ Borrar</button>
+          </div>
+        `;
 
         galeria.appendChild(div);
       });
     }
 
-    // Manejar creación de nuevos productos
+
+    // VALIDACIÓN COMPLETA DEL FORMULARIO
+    function validarFormulario() {
+      limpiarErrores();
+      
+      let esValido = true;
+      
+      // Obtener valores de los campos
+      const nombre = document.getElementById('nombre').value;
+      const imagen = document.getElementById('imagen').value;
+      const enlace = document.getElementById('enlace').value;
+      const genero = document.getElementById('genero').value;
+      
+      // Validar NOMBRE
+      let error = validarCampoVacio(nombre, 'nombre del artista/álbum');
+      if (error) {
+        mostrarError('nombre', error);
+        esValido = false;
+      } else {
+        error = validarLongitud(nombre, 2, 50, 'El nombre');
+        if (error) {
+          mostrarError('nombre', error);
+          esValido = false;
+        }
+      }
+      
+      // Validar URL de IMAGEN
+      error = validarCampoVacio(imagen, 'URL de la imagen');
+      if (error) {
+        mostrarError('imagen', error);
+        esValido = false;
+      } else {
+        error = validarURL(imagen, 'La URL de la imagen');
+        if (error) {
+          mostrarError('imagen', error);
+          esValido = false;
+        } else {
+          error = validarURLImagen(imagen);
+          if (error) {
+            mostrarError('imagen', error);
+            esValido = false;
+          }
+        }
+      }
+      
+      // Validar URL de SPOTIFY
+      error = validarCampoVacio(enlace, 'URL de Spotify');
+      if (error) {
+        mostrarError('enlace', error);
+        esValido = false;
+      } else {
+        error = validarURL(enlace, 'La URL de Spotify');
+        if (error) {
+          mostrarError('enlace', error);
+          esValido = false;
+        } else {
+          error = validarURLSpotify(enlace);
+          if (error) {
+            mostrarError('enlace', error);
+            esValido = false;
+          }
+        }
+      }
+      
+      // Validar GÉNERO
+      error = validarGenero(genero);
+      if (error) {
+        mostrarError('genero', error);
+        esValido = false;
+      }
+      
+      return esValido;
+    }
+
+    // ============================================
+    // CRUD - UPDATE: Función editar
+    // ============================================
+
+    function editarProducto(index) {
+      const producto = productos[index];
+
+      document.getElementById("nombre").value = producto.nombre;
+      document.getElementById("imagen").value = producto.imagen;
+      document.getElementById("enlace").value = producto.enlace;
+      document.getElementById("genero").value = producto.genero;
+
+      document.getElementById("titulo-formulario").textContent = "Editar producto";
+      document.getElementById("btn-submit").textContent = "Actualizar";
+      document.getElementById("index-editar").value = index;
+
+      document.getElementById("formulario-producto").scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // ============================================
+    // CRUD - DELETE: Función eliminar
+    // ============================================
+
+    function eliminarProducto(index) {
+      const producto = productos[index];
+      const confirmar = confirm(`¿Estás seguro de eliminar "${producto.nombre}"?`);
+
+      if (confirmar) {
+        productos.splice(index, 1);
+        guardarProductos(productos);
+        mostrarProductos();
+        alert("🗑️ Producto eliminado correctamente");
+      }
+    }
+
+    // ============================================
+    // FUNCIONES DE PRODUCTOS
+    // ============================================
+
+    /* NOTE: The simplified `mostrarProductos` definition was removed because
+       a more complete implementation (with edit/delete actions) exists
+       earlier in the file. Keeping a single definition prevents accidental
+       function redefinition and runtime errors. */
+
+    // Manejar el envío del formulario
     document.getElementById("productoForm").addEventListener("submit", function (e) {
       e.preventDefault();
 
-      const nombre = document.getElementById("nombre").value;
-      const imagen = document.getElementById("imagen").value;
-      const enlace = document.getElementById("enlace").value;
+      // Validar el formulario con JavaScript
+      if (!validarFormulario()) {
+        return; // Si no es válido, no continuar
+      }
 
-      productos.push({ nombre, imagen, enlace });
+      // Si es válido, obtener los valores
+      const nombre = document.getElementById("nombre").value.trim();
+      const imagen = document.getElementById("imagen").value.trim();
+      const enlace = document.getElementById("enlace").value.trim();
+      const genero = document.getElementById("genero").value;
 
+      // Agregar el producto
+      productos.push({ nombre, imagen, enlace, genero });
+
+      // Mostrar productos
       mostrarProductos();
 
+      // Limpiar el formulario
       this.reset();
+      limpiarErrores();
       
-      alert("¡Producto añadido correctamente!");
+      // Mensaje de éxito
+      alert("¡Producto añadido correctamente! ✨");
+    });
+
+    // Validación en tiempo real (opcional pero mejora la experiencia)
+    document.getElementById('nombre').addEventListener('blur', function() {
+      const valor = this.value;
+      let error = validarCampoVacio(valor, 'nombre del artista/álbum');
+      if (!error) {
+        error = validarLongitud(valor, 2, 50, 'El nombre');
+      }
+      if (error) {
+        mostrarError('nombre', error);
+      } else {
+        document.getElementById('error-nombre').style.display = 'none';
+        this.style.borderColor = '#4CAF50';
+      }
+    });
+
+    document.getElementById('imagen').addEventListener('blur', function() {
+      const valor = this.value;
+      let error = validarCampoVacio(valor, 'URL de la imagen');
+      if (!error) {
+        error = validarURL(valor, 'La URL de la imagen');
+      }
+      if (!error) {
+        error = validarURLImagen(valor);
+      }
+      if (error) {
+        mostrarError('imagen', error);
+      } else {
+        document.getElementById('error-imagen').style.display = 'none';
+        this.style.borderColor = '#4CAF50';
+      }
+    });
+
+    document.getElementById('enlace').addEventListener('blur', function() {
+      const valor = this.value;
+      let error = validarCampoVacio(valor, 'URL de Spotify');
+      if (!error) {
+        error = validarURL(valor, 'La URL de Spotify');
+      }
+      if (!error) {
+        error = validarURLSpotify(valor);
+      }
+      if (error) {
+        mostrarError('enlace', error);
+      } else {
+        document.getElementById('error-enlace').style.display = 'none';
+        this.style.borderColor = '#4CAF50';
+      }
+    });
+
+    document.getElementById('genero').addEventListener('change', function() {
+      const valor = this.value;
+      const error = validarGenero(valor);
+      if (error) {
+        mostrarError('genero', error);
+      } else {
+        document.getElementById('error-genero').style.display = 'none';
+        this.style.borderColor = '#4CAF50';
+      }
     });
 
     // Inicializar al cargar la página
     document.addEventListener("DOMContentLoaded", function() {
       mostrarProductos();
     });
+
+    // ============================================
+// EFECTO PARALLAX CON VINILOS
+// ============================================
+
+// Crear contenedor de parallax
+function crearParallax() {
+  const parallaxContainer = document.createElement('div');
+  parallaxContainer.className = 'parallax-container';
+  
+  // Crear 5 discos de vinilo
+  for (let i = 1; i <= 5; i++) {
+    const vinyl = document.createElement('div');
+    vinyl.className = `vinyl-record vinyl-${i}`;
+    parallaxContainer.appendChild(vinyl);
+  }
+  
+  document.body.insertBefore(parallaxContainer, document.body.firstChild);
+}
+
+// Efecto parallax al hacer scroll
+function aplicarParallax() {
+  const vinyls = document.querySelectorAll('.vinyl-record');
+  const scrolled = window.pageYOffset;
+  
+  vinyls.forEach((vinyl, index) => {
+    const speed = 0.3 + (index * 0.1); // Diferentes velocidades
+    const yPos = scrolled * speed;
+    const rotation = scrolled * (0.1 + index * 0.05);
+    
+    vinyl.style.transform = `translateY(${yPos}px) rotate(${rotation}deg)`;
+  });
+}
+
+// Inicializar parallax cuando cargue la página
+document.addEventListener("DOMContentLoaded", function() {
+  crearParallax();
+  mostrarProductos();
+  
+  // Aplicar parallax al hacer scroll
+  window.addEventListener('scroll', aplicarParallax);
+});
+
+
+
+  </script>
+  
+  <script>
+    
+    function initScrollReveal() {
+      const items = document.querySelectorAll('.galeria .grupo, .generos-grid .genero-item');
+
+      // Add initial class
+      items.forEach(el => el.classList.add('reveal'));
+
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries, obs) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              obs.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+
+        items.forEach(i => observer.observe(i));
+      } else {
+        // Fallback for older browsers: reveal on scroll
+        const revealOnScroll = () => {
+          const windowH = window.innerHeight;
+          items.forEach(item => {
+            const rect = item.getBoundingClientRect();
+            if (rect.top < windowH * 0.85) item.classList.add('visible');
+          });
+        };
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll();
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', initScrollReveal);
   </script>
   
 
